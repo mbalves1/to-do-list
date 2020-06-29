@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda</title>
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="bg-dark">
+        <div class="mt:0 bg-dark text-white">
+            <h1 class="ml-4">Agenda</h1>
+        </div>
+    </header>
+    <!-- <section class="container">
+
+		<button class="botaodeTesteCartao  btn-dark" type="submit">View Tarefas</button>
+
+		<button class="botaodeTeste btn-dark"  type="submit">View Recados</button>
+
+	</section> -->
+
+    <section class="container">
+        <div id="formAdicionaTarefa">
+            <h2>Adicionar Tarefas</h2>
+            <form class="needs-validation" id="formAdiciona" novalidate>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationTooltip01">First name</label>
+                        <input type="text" name="nome" class="form-control nome " id="nome" required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationTooltip02">Tarefas</label>
+                        <input type="text" name="tarefas" class="form-control tarefas  " id="tarefas" required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltip02">Calendário Inicio</label>
+                        <input type="date" name="calendario" class="form-control auto calendario" id="calendario" required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationTooltip02">Calendário Termino</label>
+                        <input type="date" name="calendario2" class="form-control auto calendario2" id="calendario2"
+                            required>
+                        <div class="valid-tooltip">
+                            Looks good!
+                        </div>
+                    </div>
+
+                </div>
+                <div class="botaoSalvaLimpar">
+                    <button class="btn btn-success" type="submit">Salvar</button>
+                    <button class="btn btn-danger" type="submit">Limpar</button>
+                </div>
+
+
+                <!-- <button class="btn btn-primary"></button>
+                <div class="recados">
+                    <label class="botaoArea">Recados</label>
+                    <textarea class="botaoArea" name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                </div>
+
+            </form> -->
+
+            <table class="table table-dark mt-4 pl-3 center">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Tarefa</th>
+                        <th scope="col">Data INicial</th>
+                        <th scope="col">Data Final</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    
+
+
+
+   
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/main.js" type="module"></script>
+    </body>
+    </html>
