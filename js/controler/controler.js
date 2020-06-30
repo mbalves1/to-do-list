@@ -33,3 +33,14 @@ export function adicionaCartao(recado){
 export function getRecado(){
     return listaDeCartao;
 }
+
+export function excluirRecado(indice){
+    listaDeCartao.splice(indice,1)
+    localStorage.setItem('agendaRecados', JSON.stringify(listaDeCartao))
+}
+
+/** 
+ * Busca
+ *
+ */
+

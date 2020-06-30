@@ -1,4 +1,4 @@
-import { getTarefas, adicionaTarefa, excluir } from '../controler/controler.js';
+import { getTarefas, adicionaTarefa, excluir, getRecado, excluirRecado  } from '../controler/controler.js';
 
 listarTodasTarefas();
 
@@ -36,4 +36,37 @@ tBody.onclick = (event) => {
      catch(erro){
          alert("erro")
      }   
+}
+
+/************************** */
+
+listarRecados()
+
+
+export function listarRecados(){
+    const todosRecado = getRecado();
+    let linhasRecados = '';
+
+    todosRecado.forEach((recado, indice) => {
+        linhasRecados += `
+            <div class="cartao cartao-conteudo d-inline-flex p-2 bd-dark"><p>${recado.recado}<button data-indice="${indice}" class="btn btn-warning excluir"></button></p></div>
+            
+        `;
+        
+    })
+    cartaoMural.innerHTML = linhasRecados;
+}
+
+cartaoMural.onclick = (event) => {
+    try{
+        let indice = event.target.dataset.indice;
+        if(indice != undefined){
+            excluirRecado(indice)
+            listarRecados()
+        }
+    }    
+    catch(erro){
+        alert('erro')
+    }
+    
 }

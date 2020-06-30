@@ -1,5 +1,5 @@
 import {adicionaTarefa, adicionaCartao} from '../controler/controler.js';
-import {listarTodasTarefas} from '../view/tabela.js';
+import {listarTodasTarefas, listarRecados} from '../view/tabela.js';
 
 
 const botao = document.querySelector('.btn-success')
@@ -22,11 +22,15 @@ event.preventDefault();
 
 // **********************************************
 
-const botaoRecado = document.querySelector('.btn-primary')
+const botaoRecado = document.querySelector('.success')
 
 botaoRecado.onclick = (event) => {
     event.preventDefault();
-    let area = textarea.value;
+    let area = recado.value;
     adicionaCartao(area)
+    listarRecados();
+    
+    recado.value = '';
+
     
 }

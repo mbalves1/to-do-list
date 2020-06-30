@@ -22,3 +22,26 @@ footer{
     position:fixed;
     left:10px;
 }
+
+/***
+Classe do cartao de recados
+*/
+
+.cartao{
+    margin: 32px 16px;
+	padding: 16px;
+	line-height: 1.5;
+	overflow: visible;
+	position: relative;
+	word-wrap: break-word;
+	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+	background: #EBEF40 !important;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	transition: transform .2s ease-in;
+	border-radius: 10px;
+}
+
+.mural{
+    display:flex;
+    
+}
